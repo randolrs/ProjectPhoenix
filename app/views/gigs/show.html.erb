@@ -7,7 +7,15 @@
 		  <%= @gig.desription %>
 		</p>
 
-		<%= link_to 'Edit', edit_gig_path(@gig) %> |
+		<p>
+		  <%= @gig.user.name %>
+		</p>
+
+		<% if current_user == @gig.user %>
+		<%= link_to 'Edit', edit_gig_path(@gig) %>
+		<% end %>
+		
+
 		<%= link_to 'Back', gigs_path %>
 
 		</div>

@@ -6,4 +6,8 @@ class Gig < ActiveRecord::Base
   	:too_short => "This section requires at least %{count} 
   					characters." }
 
+  	belongs_to :user
+
+  	validates :user_id, presence: true
+
 end

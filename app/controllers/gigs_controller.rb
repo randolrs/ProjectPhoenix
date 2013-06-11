@@ -1,8 +1,11 @@
 class GigsController < ApplicationController
+
+  before_filter :authenticate_user!
+
   # GET /gigs
   # GET /gigs.json
   def index
-    @gigs = Gig.all
+    @gigs = current_user.Gigs.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,7 +27,7 @@ class GigsController < ApplicationController
   # GET /gigs/new
   # GET /gigs/new.json
   def new
-    @gig = Gig.new
+    @gig = current_user.Gigs.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +37,13 @@ class GigsController < ApplicationController
 
   # GET /gigs/1/edit
   def edit
-    @gig = Gig.find(params[:id])
+    @gig = current_user.Gigs.find(params[:id])
   end
 
   # POST /gigs
   # POST /gigs.json
   def create
-    @gig = Gig.new(params[:gig])
+    @gig = current_user.Gigs.new(params[:gig])
 
     respond_to do |format|
       if @gig.save
@@ -56,7 +59,7 @@ class GigsController < ApplicationController
   # PUT /gigs/1
   # PUT /gigs/1.json
   def update
-    @gig = Gig.find(params[:id])
+    @gig = current_user.Gigs.find(params[:id])
 
     respond_to do |format|
       if @gig.update_attributes(params[:gig])
@@ -72,7 +75,7 @@ class GigsController < ApplicationController
   # DELETE /gigs/1
   # DELETE /gigs/1.json
   def destroy
-    @gig = Gig.find(params[:id])
+    @gig = current_user.Gigs.find(params[:id])
     @gig.destroy
 
     respond_to do |format|
