@@ -1,0 +1,24 @@
+<h1>List of Gigs</h1>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+
+        <th>Current Gig Requests</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      <%= render @gigs %>
+
+    </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Gig', new_gig_path %>

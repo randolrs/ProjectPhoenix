@@ -1,5 +1,11 @@
 ProjectPhoenix::Application.routes.draw do
-  get "pages/home"
+  resources :gigs
+
+
+  resources :gig_requests
+
+
+get "pages/home"
 
 root :to => 'pages#home'
 
