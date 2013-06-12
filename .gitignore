@@ -20,3 +20,5 @@
 .project
 
 .idea
+# Ignore public system file
+/public/system

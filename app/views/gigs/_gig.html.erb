@@ -1,6 +1,7 @@
 <tr>
     
 <% if current_user == gig.user %>
+	<td><%= image_tag gig.image (:medium) %></td>
     <td><%= gig.desription %></td>
     <td><%= link_to 'Show', gig %></td>
 
