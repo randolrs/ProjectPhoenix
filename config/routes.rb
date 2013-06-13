@@ -11,6 +11,13 @@ root :to => 'pages#home'
 
 get 'about' => 'pages#about'
 
+get 'how_it_works' => 'pages#how_it_works'
+
+get 'request' => 'gigs#new'
+
+get 'dashboard' => 'gigs#index'
+
+
   devise_for :users
 
   # The priority is based upon order of creation:
