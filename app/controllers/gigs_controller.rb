@@ -26,6 +26,7 @@ class GigsController < ApplicationController
 
   # GET /gigs/new
   # GET /gigs/new.json
+  
   def new
     @gig = current_user.Gigs.new
 
