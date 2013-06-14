@@ -1,5 +1,5 @@
 class Gig < ActiveRecord::Base
-  attr_accessible :desription, :image
+  attr_accessible :desription, :image, :image_remote_url
   
 
   validates :desription, presence: true 
@@ -16,5 +16,10 @@ class Gig < ActiveRecord::Base
 
 
   	validates :user_id, presence: true
+
+    def image_remote_url=(url_value)
+        self.image = URI.parse(url_value) unless url_value.blank? 
+        super
+    end
 
 end

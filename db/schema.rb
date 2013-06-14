@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130612231646) do
+ActiveRecord::Schema.define(:version => 20130614000041) do
 
   create_table "gig_requests", :force => true do |t|
     t.string   "description"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20130612231646) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "image_remote_url"
   end
 
   add_index "gigs", ["user_id"], :name => "index_gigs_on_user_id"
