@@ -29,12 +29,7 @@ ActiveRecord::Schema.define(:version => 20130615204256) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "image_remote_url"
-    t.string   "music_type"
-    t.string   "event_type"
-    t.datetime "event_date"
-    t.integer  "event_zip"
-    t.integer  "event_price"
-    t.integer  "event_duration"
+    
   end
 
   add_index "gigs", ["user_id"], :name => "index_gigs_on_user_id"
