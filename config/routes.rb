@@ -1,4 +1,6 @@
 ProjectPhoenix::Application.routes.draw do
+  devise_for :musicians
+
   resources :gigs
 
 

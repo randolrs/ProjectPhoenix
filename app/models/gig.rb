@@ -1,14 +1,14 @@
 class Gig < ActiveRecord::Base
-  attr_accessible :desription, :image, :image_remote_url
-  
+  attr_accessible :desription, :image, :image_remote_url, :music_type, :event_type, :event_date, :event_zip, :event_duration, :event_price
 
   validates :desription, presence: true 
-  validates :desription, :length => { :minimum =>3, 
-  	:too_short => "This section requires at least %{count} 
+
+  validates :desription, :length => { :maximum =>300, 
+  	:too_long => "This section has a maximum length of %{count} 
   					characters." }
-  	validates_attachment :image, presence: true,
-  							content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']},
-  							size: {less_than: 5.megabytes}
+
+  validates_format_of :event_zip, :with => %r{\d{5}(-\d{4})?},
+                    :message => "Please enter valid zipcode"
 
 
   	belongs_to :user

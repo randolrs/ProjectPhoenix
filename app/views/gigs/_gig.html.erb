@@ -1,12 +1,29 @@
 <tr>
     
 <% if current_user == gig.user %>
-	<td><%= image_tag gig.image (:medium) %></td>
-    <td><%= gig.desription %></td>
-    <td><%= link_to 'Show', gig %></td>
+	
+	<td> <%=gig.music_type%> Request for <%=gig.event_date%> </td>
+
+	
+
+    <td>
+
+    		<%= link_to 'Review Request Details',  gig , class: "btn btn-medium btn-primary" %>
 
 
-    <td><%= link_to 'Edit', edit_gig_path(gig) %></td>
-    <td><%= link_to 'Destroy', gig, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </td>
+
+    
+    <td>
+			<%= link_to 'Proposals Received',  new_user_registration_path , class: "btn btn-medium btn-primary" %>
+
+	</td>
+
+	<td>
+			<%= link_to 'Cancel Request',  gig, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-medium btn-primary" %>
+
+	</td>
+
+
 	<% end %>
   </tr>

@@ -1,3 +1,3 @@
 class GigRequest < ActiveRecord::Base
-  attr_accessible :decription
+  attr_accessible :description
 end

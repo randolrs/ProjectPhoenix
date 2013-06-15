@@ -1,18 +1,42 @@
 <%= simple_form_for(@gig, html: { class: "form-horizontal"}) do |f| %>
 
 
-  <%= f.error_notification %>
-  <%= f.full_error :image_file_size, class: "alert alert-error" %>
+<%= f.error_notification %>
 
-  <%= f.full_error :image_content_type, class: "alert alert-error" %>
+	<div class="form-horizontal">
+
+		<h3> I want ... </h3>
+
+ <%= f.select :music_type, [['a Band','Band'],['a DJ','DJ'],['Classical Musicians','Classical Musician']] %>
 
 
-  <%= f.input :image, label: "Upload a Profile Image" %>
-  <%= f.input :image_remote_url, label: "or enter URL" %>
-  
-  <%= f.input :desription, as: :text, input_html: { rows: "3" } %>
+ 		<h3> For my ... </h3>
+
+ <%= f.select :event_type, [['Corporate Event','corporate event'],['Private Event','private event'],['Music Venue', 'music venue']] %>
+
+ <h3> On ... </h3>
+
+ <%= f.datetime_select :event_date %>
+
+ <h3> For this many hours ... </h3>
+
+ <%= f.input_field :event_duration, class: 'span1' %>
+
+  <h3> In the Following Zip Code ... </h3>
+
+ <%= f.input_field :event_zip, class: 'span1' %>
+
+ <h3> I am willing to pay ... </h3>
+
+ <%= f.input_field :event_price, class: 'span1' %>
+
+<h3> Additional Comments </h3>
+  <%= f.input_field :desription, input_html: { rows: "3" } %>
+
+	</div>
 
   <div class="form-actions">
     <%= f.button :submit, class: "btn btn-primary" %>
   </div>
+
 <% end %>
