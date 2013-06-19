@@ -1,5 +1,5 @@
 ProjectPhoenix::Application.routes.draw do
-  devise_for :musicians
+  
 
   resources :gigs
 
@@ -19,8 +19,8 @@ get 'request' => 'gigs#new'
 
 get 'dashboard' => 'gigs#index'
 
-
   devise_for :users
+  devise_for :musicians
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
