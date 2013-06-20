@@ -5,32 +5,15 @@
   
   <%= f.error_notification %>
 
-  <% if params[:page] == "Musician" %>
 
-  <h5>Full name</h5>
-  <%= f.input_field :name %>
 
-  <h5>Mobile phone</h5>
-
-  <h5>Email address</h5>
-  <%= f.input_field :email %>
-
-	<h5>Music Category</h5>
-  	
-  	<%= f.select :music_type, [['Band','Band'],['DJ','DJ'],['Classical Musician(s)','Classical Musician']] %>
-
-  	<h5>Zip code</h5>
-
-  	<div class="form-actions">
-    <%= f.submit "Submit", class: "btn btn-primary" %>
- 	</div>
-
-<% else %>
 	
 	<h4>Welcome! Sign up for SongBird</h4>
 	<h6>Already have an account? <a href="http://localhost:3000/users/sign_in">Login</a> </h6>
 
 	<h5>Phone Number</h5>
+
+  <%= f.input_field :phone %>
 
   	<h5>Email address</h5>
   	<%= f.input_field :email %>
@@ -45,9 +28,6 @@
     		<%= f.submit "Sign up and Continue", class: "btn btn-primary" %>
   		</div>
 
-  		
-
-<% end %>
 
 	<%= render "devise/shared/links" %>
   

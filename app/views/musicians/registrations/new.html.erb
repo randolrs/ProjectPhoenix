@@ -16,7 +16,7 @@
   <%= f.input_field :email %>
 
   <h4>Category</h4>
- 
+ <%= f.select :music_type, [['a Band','Band'],['a DJ','DJ'],['Classical Musicians','Classical Musician']] %>
 
   <h4>Zip code</h4>
   <%= f.input_field :zip %>
@@ -25,7 +25,7 @@
   <%= f.input_field :password %>
 
   <h4>Confirm Password</h4>
-  <%= f.input :password_confirmation %>
+  <%= f.input_field :password_confirmation %>
 	
 
 

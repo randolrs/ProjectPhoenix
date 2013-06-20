@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130619045010) do
+ActiveRecord::Schema.define(:version => 20130620122208) do
 
   create_table "gig_requests", :force => true do |t|
     t.string   "description"
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(:version => 20130619045010) do
     t.string   "name"
     t.string   "phone"
     t.string   "zip"
-    t.string   "musictype"
+    t.string   "music_type"
   end
 
   add_index "musicians", ["email"], :name => "index_musicians_on_email", :unique => true
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(:version => 20130619045010) do
     t.datetime "updated_at",                             :null => false
     t.string   "name"
     t.string   "music_type"
+    t.string   "phone"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
