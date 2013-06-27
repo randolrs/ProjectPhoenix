@@ -1,6 +1,10 @@
 ProjectPhoenix::Application.routes.draw do
   
 
+  get "musicians/show"
+
+  get "users/show"
+
   resources :gigs
 
 
@@ -22,6 +26,7 @@ get 'dashboard' => 'gigs#index'
   devise_for :users
 
   devise_for :musicians
+  match 'musicians/:id' => "musicians#show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

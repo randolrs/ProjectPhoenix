@@ -26,6 +26,13 @@
 
                         <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
 
+                    <% elsif musician_signed_in? %>
+
+                            <li><%= link_to "Edit Profile", edit_musician_registration_path %></li>
+
+                            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+
+
                       <% else %>
                             <li><%= link_to "Become an SB Musician", new_musician_registration_path %></li>
                             

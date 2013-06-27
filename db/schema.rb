@@ -54,7 +54,6 @@ ActiveRecord::Schema.define(:version => 20130620122208) do
     t.datetime "updated_at",                             :null => false
     t.string   "name"
     t.string   "phone"
-    t.string   "zip"
     t.string   "music_type"
   end
 
