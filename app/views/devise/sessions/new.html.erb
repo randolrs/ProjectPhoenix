@@ -1,14 +1,36 @@
-<h2>Sign in</h2>
 
-<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
+<div class = "span6 offset3">
 
-  <%= f.input :email %>
-  <%= f.input :password %>
-  <%= f.input :remember_me, as: :boolean %>
+	<div class="menu">
 
-  <div class="form-actions">
-    <%= f.submit "Sign in", class: "btn btn-primary" %>
-  </div>
-<% end %>
+		<form>
+			
+	<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
 
-<%= render "devise/shared/links" %>
+	<legend>
+	<h4>Login to SongBird</h4>
+	</legend>
+		
+		<h5> Email </h5>
+
+	  		<%= f.input_field :email %>
+
+	  	<h5> Password </h5>
+	  
+	  		<%= f.input_field :password %>
+
+	  <div class="form-actions">
+	   		<%= f.submit "Log into SongBird", class: "btn btn-primary" %>
+	  </div>
+
+	<% end %>
+
+</form>
+
+	</div>
+
+	<%= render "devise/shared/links" %>
+</div>
+
+	
+

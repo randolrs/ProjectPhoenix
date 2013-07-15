@@ -23,6 +23,8 @@ get 'request' => 'gigs#new'
 
 get 'dashboard' => 'gigs#index'
 
+get 'musician_dashboard' => 'musicians#index'
+
   devise_for :users
 
   devise_for :musicians

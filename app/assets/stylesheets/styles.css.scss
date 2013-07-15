@@ -1,17 +1,45 @@
-$navbarBackgroundHighlight: white;
-$navbarBackground: white;
-$btnPrimaryBackground: green;
+$navbarBackgroundHighlight: #36B32D;
+$navbarBackground: #36B32D;
+$btnPrimaryBackground: #500D50;
 
 @import 'bootstrap';
+
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+
 body{
-    padding-top: 60px;
+    padding:0px;
 }
 
 @import 'bootstrap-responsive';
 
 .navbar-inner{
     @include box-shadow(none !important);
-    border: 0;
+    border: 52;
+    vertical-align: middle;
+    font-weight: bold;
+    color: black;
+    padding:0px;
+}
+
+.navbar{
+    padding:0px;
+
 }
 
 .footer{
@@ -20,4 +48,11 @@ body{
     a{
         color: $gray;
     }
+}
+
+.bottom-margin{
+  margin-top: 1cm;
+  width:300px;
+  font-size:150%;
+  line-height:110%;
 }
