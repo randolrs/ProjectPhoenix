@@ -22,10 +22,15 @@
   .hometext {
   	color:white;
   	font-family: Calibri;
-  	margin:50px;
+  	margin:30px;
   	width:400px;
   	z-index:5;
   }
+
+ .fbmargin{
+ 	margin-left:50px;
+ }
+
  .container{
  	margin:0px;
  	padding:0px;
@@ -36,9 +41,9 @@
  	float:left;
  	display:block;
  	margin: 0;
- 	margin-top:40px;
+ 	margin-top:112px;
  	padding:0;
- 	background-color:#71DD52;
+ 	background-color:#3AE64E;
  	z-index: -3;
  	width: 100%;
     height: 400px;
@@ -64,15 +69,29 @@ img.home {
   .herowrap{
   	position:absolute;
   	width:100%;
-  	top: 400px;
+  	top: 472px;
   	height: 160px;
   	background-color:#FFE8FF;
   	z-index:6;
   }
 
+.presswrap{
+  	position:absolute;
+  	width:100%;
+  	top: 632px;
+  	height: 160px;
+  	background-color:#E5E3E2;
+  	z-index:6;
+  }
+
+  .people-press{
+  	margin:30px;
+  	font-weight:bold;
+  }
+
   .requestgigcontainer{
   	position:absolute;
-  	top:380px;
+  	top:452px;
   	left:30px;
   	width:325px;
   	height:130px;
@@ -85,12 +104,72 @@ img.home {
   p {margin-left: auto;
     margin-right: auto;}
 
+   .navform {
+   	color:black;
+ }
+
   .description1of3 {
   	position:absolute;
-  	top:380px;
+  	top:452px;
   	left:385px;
   	width:160px;
   	height:130px;
   	z-index: 10;
   	background-color:#FFFFFF;
   }
+
+  .description2of3 {
+  	position:absolute;
+  	top:452px;
+  	left:595px;
+  	width:160px;
+  	height:130px;
+  	z-index: 10;
+  	background-color:#FFFFFF;
+  }
+
+  .description3of3 {
+  	position:absolute;
+  	top:452px;
+  	left:805px;
+  	width:160px;
+  	height:130px;
+  	z-index: 10;
+  	background-color:#FFFFFF;
+  }
+
+ .footerwrap{
+ 	bottom: 0;
+}
+
+.headerwrap{
+	position:absolute;
+	height:56px;
+	padding:8px;
+	top:0px;
+	background-color:#F4F3F5;
+	z-index:12;
+	margin-left: 30px;
+}
+
+.small-margin{
+	margin-top: 72px;
+	padding:0px;
+}
+
+.callus{
+	position:absolute;
+	left:550px;
+	width:250px;
+	font-size:100%;
+	font-family: Calibri;
+	vertical-align:middle;
+	top:15px;
+	color:black;
+}
+
+.header-login{
+	position:absolute;
+	left:700px;
+	top:15px;
+}
