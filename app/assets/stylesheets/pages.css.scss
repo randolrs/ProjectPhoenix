@@ -43,7 +43,7 @@
  	margin: 0;
  	margin-top:112px;
  	padding:0;
- 	background-color:#3AE64E;
+ 	background-color:#17D52D;
  	z-index: -3;
  	width: 100%;
     height: 400px;
@@ -71,8 +71,9 @@ img.home {
   	width:100%;
   	top: 472px;
   	height: 160px;
-  	background-color:#FFE8FF;
+  	background-color:#F2F2F2;
   	z-index:6;
+  	box-shadow: 0 3px 5px #ccc;
   }
 
 .presswrap{
@@ -82,6 +83,7 @@ img.home {
   	height: 160px;
   	background-color:#E5E3E2;
   	z-index:6;
+  	box-shadow: 5px 5px 5px #888888;
   }
 
   .people-press{
@@ -96,7 +98,11 @@ img.home {
   	width:325px;
   	height:130px;
   	z-index: 10;
-  	background-color:#FFFFFF;
+  	background-color:#F7F8F9;
+  	border:1.5px solid;
+	border-radius:6px;
+	border-color:#f0f0f0;
+	box-shadow: 5px 5px 5px #888888;
   }
 
   H4 { text-align: center }
@@ -111,7 +117,7 @@ img.home {
   .description1of3 {
   	position:absolute;
   	top:452px;
-  	left:385px;
+  	left:485px;
   	width:160px;
   	height:130px;
   	z-index: 10;
@@ -121,7 +127,7 @@ img.home {
   .description2of3 {
   	position:absolute;
   	top:452px;
-  	left:595px;
+  	left:710px;
   	width:160px;
   	height:130px;
   	z-index: 10;
@@ -131,11 +137,50 @@ img.home {
   .description3of3 {
   	position:absolute;
   	top:452px;
-  	left:805px;
+  	left:935px;
   	width:160px;
   	height:130px;
   	z-index: 10;
   	background-color:#FFFFFF;
+  }
+
+  .djpic {
+  	position:absolute;
+  	top:20px;
+  	left:420px;
+  	width:259px;
+  	height:400px;
+  	z-index: 10;
+  	background-color:#FFFFFF;
+  	transform:rotate(-4deg);
+	-ms-transform:rotate(-4deg); /* IE 9 */
+	-webkit-transform:rotate(-4deg); /* Safari and Chrome */
+  }
+
+  .violinistpic {
+  	position:absolute;
+  	top:20px;
+  	left:660px;
+  	width:259px;
+  	height:400px;
+  	z-index: 9;
+  	background-color:#FFFFFF;
+  	transform:rotate(3deg);
+	-ms-transform:rotate(3deg); /* IE 9 */
+	-webkit-transform:rotate(3deg); /* Safari and Chrome */
+  }
+
+  .bandpic {
+  	position:absolute;
+  	top:20px;
+  	left:900px;
+  	width:252px;
+  	height:400px;
+  	z-index: 8;
+  	background-color:#FFFFFF;
+  	transform:rotate(1deg);
+	-ms-transform:rotate(1deg); /* IE 9 */
+	-webkit-transform:rotate(1deg); /* Safari and Chrome */
   }
 
  .footerwrap{
@@ -159,7 +204,7 @@ img.home {
 
 .callus{
 	position:absolute;
-	left:550px;
+	left:950px;
 	width:250px;
 	font-size:100%;
 	font-family: Calibri;
@@ -172,4 +217,20 @@ img.home {
 	position:absolute;
 	left:700px;
 	top:15px;
+}
+
+.headerlogo {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:200px;
+	height:40px;
+}
+
+.headertag{
+	position:absolute;
+	top:25px;
+	height:10px;
+	left:200px;
+	width:300px;
 }
