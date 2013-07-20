@@ -7,3 +7,98 @@
     background-color: transparent;
     text-align: center;
 }
+
+.userloginform{
+	margin-left:auto;
+	margin-right:auto;
+	padding: 0px;
+}
+
+.usersignupform{
+	margin-left:auto;
+	margin-right:auto;
+	padding: 0px;
+}
+
+.usersignuppadding{
+	margin-left:30px;
+}
+
+.userloginpadding{
+	margin-left:15px;
+}
+
+.headtext {
+	color: #36B32D;
+}
+
+.usersignincontainer{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.usersignincontainer{
+  	z-index: 10;
+  	margin-left:auto;
+	margin-right:auto;
+  	width: 250px;
+  	background-color:#Ffffff;
+  	border:1.5px solid;
+	border-radius:4px;
+	border-color:#b2b2b2;
+	box-shadow: 1px 3px 5px 1px #D4D4D4;
+  }
+
+  .usersignupcontainer{
+  	z-index: 10;
+  	margin-left:auto;
+	margin-right:auto;
+  	width: 330px;
+  	background-color:#Ffffff;
+  	border:1.5px solid;
+	border-radius:4px;
+	border-color:#b2b2b2;
+	box-shadow: 1px 3px 5px 1px #D4D4D4;
+  }
+
+.userloginbtn {
+	margin-left:75px;
+	margin-right:auto;
+}
+
+.haveacct {
+	font-weight:400;
+	font-size:85%;
+}
+
+.usersignupbtn {
+	margin-left:60px;
+	margin-right:auto;
+}
+
+userbtn {
+	width:100px;
+}
+
+
+  .header-login{
+  position:absolute;
+  left:700px;
+  top:15px;
+}
+
+.headerlogo {
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:200px;
+  height:40px;
+}
+
+.headertag{
+  position:absolute;
+  top:25px;
+  height:10px;
+  left:200px;
+  width:300px;
+}

@@ -1,38 +1,75 @@
-<h2>Apply to be a SB Pro</h2>
+
+<div class="musiciansignupcontainer">
+
+<div class = "appheadtext">
+
+<h3>Apply to be a</h3>
+
+</div>
+
+<div class = "appheadtext">
+
+<h3>SongBird Musician</h3>
 
 <h3>Get high quality gig requests from local event planners </h3>
 
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
+</div>
+
+<div class="musiciansignuppadding">
+
+<div class = "haveacct">
+    Already have an account? <a href="http://localhost:3000/users/sign_in">Login</a>
+</div>
+
+<h4> </h4>
+
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-vertical'}) do |f| %>
+
   
-  <%= f.error_notification %>
+<div class="musiciansignupform">
 
-  <h4>Full name </h4>
-  <%= f.input_field :name %>
+  <h5> Full Name </h5>
 
-  <h4>Mobile phone</h4>
-  <%= f.input_field :phone %>
+    <%= f.input :name, :label => false, :placeholder =>'Full Name' %>
 
-  <h4>Email address</h4>
-  <%= f.input_field :email %>
+  <h5> Phone Number </h5>
 
-  <h4>Category</h4>
- <%= f.select :music_type, [['a Band','Band'],['a DJ','DJ'],['Classical Musicians','Classical Musician']] %>
+    <%= f.input :phone, :label => false, :placeholder =>'Phone Number' %>
 
-  <h4>Zip code</h4>
-  <%= f.input_field :zip %>
-  
-  <h4>Password</h4>
-  <%= f.input_field :password %>
+    <h5> Email Address </h5>
 
-  <h4>Confirm Password</h4>
-  <%= f.input_field :password_confirmation %>
-	
+    <%= f.input :email, :label => false, :placeholder =>'Email Address' %>
 
 
-  <div class="form-actions">
+  <h5> Music Category </h5>
+
+    <%= f.input :music_type, :label => false, :placeholder =>'Phone Number' %>
+
+  <h5> Zip Code </h5>
+
+    <%= f.input :zip, :label => false, :placeholder =>'Password' %>
+
+    <h5> Password </h5>
+
+    <%= f.input :password, :label => false, :placeholder =>'Email Address' %>
+
+
+</div>
+
+<div class="usersignupbtn">
+ 
     <%= f.submit "Submit", class: "btn btn-primary" %>
-  </div>
-  
+
+</div>   
+
+
 <% end %>
 
-<%= render "devise/shared/links" %>
+<ul>
+  <%= render "devise/shared/links" %>
+
+</ul>
+
+</div>
+
+</div>

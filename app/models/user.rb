@@ -9,7 +9,6 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :music_type, :phone
   # attr_accessible :title, :body
 
-
   has_many :Gigs
 
 end

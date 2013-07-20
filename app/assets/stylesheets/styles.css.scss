@@ -2,7 +2,7 @@ $navbarBackgroundHighlight: #36B32D;
 $navbarBackground: #36B32D;
 $navbarText:  #f9ed9d;
 $navbarLinkColor: white;
-$btnPrimaryBackground: #DE00CF;
+$btnPrimaryBackground: #E51B21;
 
 @import 'bootstrap';
 
@@ -11,6 +11,10 @@ body{
 }
 
 @import 'bootstrap-responsive';
+
+userbtn {
+  width:100px;
+}
 
 .navbar-inner{
     @include box-shadow(none !important);

@@ -1,63 +1,59 @@
-<div class = "container">
+<div class="usersignupcontainer">
 
-    <div class="row">
+<div class = "headtext">
 
-      <div class = "span6 offset3">
+<h4>Welcome! Sign up for SongBird</h4>
 
+</div>
+
+<div class="usersignuppadding">
+
+<div class = "haveacct">
+    Already have an account? <a href="http://localhost:3000/users/sign_in">Login</a>
+</div>
+
+<h4> </h4>
+
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-vertical'}) do |f| %>
+
+  
+<div class="usersignupform">
+
+  <h5> Email Address </h5>
+
+    <%= f.input :email, :label => false, :placeholder =>'Email Address' %>
+
+
+  <h5> Phone Number </h5>
+
+    <%= f.input :phone, :label => false, :placeholder =>'Phone Number' %>
+
+  <h5> Password </h5>
+
+    <%= f.input :password, :label => false, :placeholder =>'Password' %>
+
+
+</div>
+
+<div class="usersignupbtn">
+ 
+    <%= f.submit "Sign up and continue", class: "btn btn-primary" %>
+
+</div>   
+
+
+<% end %>
+
+<ul>
+  <%= render "devise/shared/links" %>
+
+</ul>
+
+</div>
+
+</div>
       
 
-        <nav class="primary_menu">
-
-        <div class="menu">
-
-    <form>
-
-      <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
-        
-        <%= f.error_notification %>
-
-
-
-      <legend>
-          <h4>Welcome! Sign up for SongBird</h4>
-      </legend>
-
-      	<h6>Already have an account? <a href="http://localhost:3000/users/sign_in">Login</a> </h6>
-
-        
-      	<h5>Phone Number</h5>
-
-        <%= f.input_field :phone %>
-
-        	<h5>Email address</h5>
-        	<%= f.input_field :email %>
-
-        	<h5> Password- 6 character minimum</h5>
-      	     <%= f.input_field :password %>
-
-      	   <h5>Confirm password</h5>
-        	   <%= f.input_field :password_confirmation %>
-
-        		<div class="form-actions">
-          		<%= f.submit "Start Booking Music", class: "btn btn-primary" %>
-
-          </div>
-
-        <% end %>
-
-        </form>
-            
-          </div>
-
-      	<%= render "devise/shared/links" %>
-
-
-
-      </div>
-
-      </nav>
-
-      </fieldset>
 
 
 

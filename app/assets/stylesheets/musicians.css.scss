@@ -8,3 +8,31 @@
 .alignright {
 	float: right;
 }
+.musiciansignupform{
+	margin-left:auto;
+	margin-right:auto;
+	padding: 0px;
+}
+ .musiciansignupcontainer{
+  	z-index: 10;
+  	margin-left:auto;
+	margin-right:auto;
+  	width: 330px;
+  	background-color:#Ffffff;
+  	border:1.5px solid;
+	border-radius:4px;
+	border-color:#b2b2b2;
+	box-shadow: 1px 3px 5px 1px #D4D4D4;
+  }
+  .musiciansignuppadding{
+	margin-left:30px;
+}
+  .appheadtext{
+	text-align:center;
+	font-size:200%;
+	color: #36B32D;
+}
+
+.signupcontainer{
+	height:400px;
+}

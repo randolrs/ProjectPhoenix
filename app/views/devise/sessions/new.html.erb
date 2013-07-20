@@ -1,36 +1,49 @@
+<div class="usersignincontainer">
 
-<div class = "span6 offset3">
+<div class = "headtext">
 
-	<div class="menu">
+<h4>Login to SongBird</h4>
 
-		<form>
-			
-	<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
-
-	<legend>
-	<h4>Login to SongBird</h4>
-	</legend>
-		
-		<h5> Email </h5>
-
-	  		<%= f.input_field :email %>
-
-	  	<h5> Password </h5>
-	  
-	  		<%= f.input_field :password %>
-
-	  <div class="form-actions">
-	   		<%= f.submit "Log into SongBird", class: "btn btn-primary" %>
-	  </div>
-
-	<% end %>
-
-</form>
-
-	</div>
-
-	<%= render "devise/shared/links" %>
 </div>
+
+<div class="userloginpadding">
+
+<h4> </h4>
+
+<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-vertical'}) do |f| %>
+
+  
+<div class="userloginform">
+
+	<h6> Email Address </h6>
+
+	  <%= f.input :email, :label => false, :placeholder =>'Email Address' %>
+
+
+	<h6> Password </h6>
+
+	  <%= f.input :password, :label => false, :placeholder =>'Password' %>
+
+</div>
+
+<div class="userloginbtn">
+ 
+    <%= f.submit "Sign in", class: "btn btn-primary" %>
+
+</div>   
+
+
+<% end %>
+
+<ul>
+	<%= render "devise/shared/links" %>
+
+</ul>
+
+</div>
+
+</div>
+
 
 	
 
