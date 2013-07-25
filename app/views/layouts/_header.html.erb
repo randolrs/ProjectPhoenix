@@ -1,7 +1,7 @@
 <div class="headerwrap">
     <div class="headerlogo">
 
-        <img src="app/public/images/textlogo.png" alt="">
+        <img src="app\assets\images\bg.JPG" alt="">
     </div>
 
     <div class="headertag">
@@ -40,14 +40,16 @@
                             
                             <% if user_signed_in? %>
 
-                                <li><i><%= link_to "My Dashboard", dashboard_path %></i></li>
-
+                                <li><%= link_to "My Dashboard", dashboard_path %></li>
+                                <li><%= link_to "Request Live Music", request_path %></li>
                                 <li><%= link_to "How it Works", how_it_works_path, method: :delete %></li>
 
                             <% elsif musician_signed_in? %>
                             
                                     <li><%= link_to "My Dashboard", musician_dashboard_path %></li>
                                     <li><%= link_to "How it Works", how_it_works_path %></li>
+                                    <li>   <%= link_to "Gigs", make_bids_path %>   </li>
+                                    <li>   <%= link_to "My Bids", my_bids_path %>   </li>
 
                             <% else %>
                                 

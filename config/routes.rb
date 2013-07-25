@@ -1,6 +1,9 @@
 ProjectPhoenix::Application.routes.draw do
   
 
+  resources :bids
+
+
   get "musicians/show"
 
   get "users/show"
@@ -21,9 +24,13 @@ get 'how_it_works' => 'pages#how_it_works'
 
 get 'request' => 'gigs#new'
 
+get 'my_bids' => 'bids#bidindex'
+
 get 'dashboard' => 'gigs#index'
 
-get 'musician_dashboard' => 'musicians#index'
+get 'musician_dashboard' => 'gigs#gigindex'
+
+get 'make_bids' => 'bids#new'
 
   devise_for :users
 

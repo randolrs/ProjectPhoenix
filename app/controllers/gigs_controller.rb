@@ -1,11 +1,24 @@
 class GigsController < ApplicationController
 
-  before_filter :authenticate_user!
 
   # GET /gigs
   # GET /gigs.json
+
   def index
+
+
     @gigs = current_user.Gigs.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @gigs }
+    end
+  end
+
+  def gigindex
+
+
+    @gigs = Gigs.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -29,6 +42,10 @@ class GigsController < ApplicationController
   
   def new
     @gig = current_user.Gigs.new
+
+#add user id to gig record
+
+    @gig.user_id = current_user.id
 
     respond_to do |format|
       format.html # new.html.erb

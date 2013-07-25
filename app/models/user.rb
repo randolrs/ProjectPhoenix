@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
 
   has_many :Gigs
 
+  has_many :bids, :through => :gigs
+
 end
 
 

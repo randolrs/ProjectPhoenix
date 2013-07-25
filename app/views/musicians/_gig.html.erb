@@ -1,0 +1,39 @@
+<tr>
+   
+<% if current_musician == current_musician %>
+
+	<td>
+		<% if gig.music_type == "DJ" %> 
+			<img src="images/pic-dj.png" alt="">
+		<% elsif gig.music_type == "Classical Musician" %>
+			<img src="images/pic-classical.png" alt="">
+		<% elsif gig.music_type == "Band" %>
+			<img src="images/pic-band.png" alt="">
+		<% end %>
+
+	</td>
+
+	<td> <a href="shane.com"> <%=gig.event_date.strftime("%B %d, %Y")%> </a> </td>
+
+	
+
+    <td>
+   
+    		<%=gig.bids.size%>
+
+    </td>
+
+    
+    <td>
+			<%= link_to 'Review Request Details',  gig , class: "btn btn-medium btn-primary" %>
+
+	</td>
+
+	<td>
+			<%= link_to 'Cancel Request',  gig, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-medium btn-primary" %>
+
+	</td>
+
+	<%end%>
+	
+  </tr>

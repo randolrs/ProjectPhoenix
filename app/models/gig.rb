@@ -17,6 +17,8 @@ class Gig < ActiveRecord::Base
 
   	validates :user_id, presence: true
 
+    has_many :bids, :dependent => :destroy
+
     def image_remote_url=(url_value)
         self.image = URI.parse(url_value) unless url_value.blank? 
         super

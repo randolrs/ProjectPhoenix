@@ -1,37 +1,47 @@
-<%= simple_form_for(@gig, html: { class: "form-horizontal"}) do |f| %>
+<div class="musiciansignupcontainer">
+
+<div class = "appheadtext">
+
+<h3>Request Live Music</h3>
+
+<h3>From High Quality Local Musicians </h3>
+
+</div>
 
 
-<%= f.error_notification %>
+<div class="musiciansignuppadding">
 
-	<div class="form-horizontal">
+<%= simple_form_for(@gig, html: { class: "form-vertical"}) do |f| %>
 
-		<h3> I want ... </h3>
+	<div class="musiciansignupform">
+
+		<h5> I want ... </h5>
 
  <%= f.select :music_type, [['a Band','Band'],['a DJ','DJ'],['Classical Musicians','Classical Musician']] %>
 
 
- 		<h3> For my ... </h3>
+ 		<h5> For my ... </h5>
 
  <%= f.select :event_type, [['Corporate Event','corporate event'],['Private Event','private event'],['Music Venue', 'music venue']] %>
 
- <h3> On ... </h3>
+ <h5> On ... </h5>
 
  <%= f.datetime_select :event_date %>
 
- <h3> For this many hours ... </h3>
+ <h5> For this many hours ... </h5>
 
- <%= f.input_field :event_duration, class: 'span1' %>
+ <%= f.input :event_duration, :label => false, :placeholder =>'Event Duration' %>
 
-  <h3> In the Following Zip Code ... </h3>
+  <h5> In the Following Zip Code ... </h5>
 
- <%= f.input_field :event_zip, class: 'span1' %>
+ <%= f.input :event_zip, as: :string, :label => false, :placeholder =>'Zip Code' %>
 
- <h3> I am willing to pay ... </h3>
+ <h5> I am willing to pay ... </h5>
 
- <%= f.input_field :event_price, class: 'span1' %>
+ <%= f.input :event_price, as: :string , :label => false, :placeholder =>'Event Price' %>
 
-<h3> Additional Comments </h3>
-  <%= f.input_field :desription, input_html: { rows: "3" } %>
+<h5> Additional Comments </h5>
+  <%= f.input :desription, input_html: { rows: "3" }, :label => false, :placeholder =>'Additional Comments' %>
 
 	</div>
 
@@ -40,3 +50,9 @@
   </div>
 
 <% end %>
+
+</div>
+
+</div>
+
+</div>

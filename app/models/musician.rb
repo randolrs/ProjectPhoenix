@@ -10,4 +10,8 @@ class Musician < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :music_type, :phone, :zip
   # attr_accessible :title, :body
 
+  has_many :gigs
+
+  has_many :bids
+
 end

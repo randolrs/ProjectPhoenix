@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130620122208) do
+ActiveRecord::Schema.define(:version => 20130724024031) do
+
+  create_table "bids", :force => true do |t|
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "musician_id"
+    t.integer  "gig_id"
+    t.float    "quote"
+  end
+
+  add_index "bids", ["gig_id"], :name => "index_bids_on_gig_id"
+  add_index "bids", ["musician_id"], :name => "index_bids_on_musician_id"
 
   create_table "gig_requests", :force => true do |t|
     t.string   "description"
@@ -35,8 +46,10 @@ ActiveRecord::Schema.define(:version => 20130620122208) do
     t.integer  "event_zip"
     t.integer  "event_price"
     t.integer  "event_duration"
+    t.integer  "gig_id"
   end
 
+  add_index "gigs", ["gig_id"], :name => "index_gigs_on_gig_id"
   add_index "gigs", ["user_id"], :name => "index_gigs_on_user_id"
 
   create_table "musicians", :force => true do |t|
@@ -54,6 +67,7 @@ ActiveRecord::Schema.define(:version => 20130620122208) do
     t.datetime "updated_at",                             :null => false
     t.string   "name"
     t.string   "phone"
+    t.string   "zip"
     t.string   "music_type"
   end
 

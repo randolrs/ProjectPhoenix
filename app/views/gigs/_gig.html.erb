@@ -1,29 +1,93 @@
+
 <tr>
-    
-<% if current_user == gig.user %>
-	
-	<td> <%=gig.music_type%> Request for <%=gig.event_date%> </td>
 
-	
+<% if user_signed_in? %>
 
-    <td>
+	<% if current_user == gig.user %>
 
-    		<%= link_to 'Review Request Details',  gig , class: "btn btn-medium btn-primary" %>
+		<td>
+			<% if gig.music_type == "DJ" %> 
+				<img src="images/pic-dj.png" alt="">
+			<% elsif gig.music_type == "Classical Musician" %>
+				<img src="images/pic-classical.png" alt="">
+			<% elsif gig.music_type == "Band" %>
+				<img src="images/pic-band.png" alt="">
+			<% end %>
 
+		</td>
 
-    </td>
+		<td> <a href="shane.com"> <%=gig.event_date.strftime("%B %d, %Y")%> </a> </td>
 
-    
-    <td>
-			<%= link_to 'Proposals Received',  new_user_registration_path , class: "btn btn-medium btn-primary" %>
+		
 
-	</td>
+	    <td>
+	   
+	    		<%= gig.user_id %>
 
-	<td>
-			<%= link_to 'Cancel Request',  gig, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-medium btn-primary" %>
+	    </td>
 
-	</td>
+	    <td>
+	   
+	    		<%= render @bids %>
+
+	    </td>
+
+	    
+	    <td>
+				<%= link_to 'Review Request Details',  gig , class: "btn btn-medium btn-primary" %>
+
+		</td>
+
+		<td>
+				<%= link_to 'Cancel Request',  gig, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-medium btn-primary" %>
+
+		</td>
 
 
 	<% end %>
+
+<% elsif musician_signed_in? %>
+
+<td>
+			<% if gig.music_type == "DJ" %> 
+				<img src="images/pic-dj.png" alt="">
+			<% elsif gig.music_type == "Classical Musician" %>
+				<img src="images/pic-classical.png" alt="">
+			<% elsif gig.music_type == "Band" %>
+				<img src="images/pic-band.png" alt="">
+			<% end %>
+
+		</td>
+
+		<td> <a href="shane.com"> <%=gig.event_date.strftime("%B %d, %Y")%> </a> </td>
+
+		
+
+	    <td>
+	   
+	    		<%= gig.user_id %>
+
+	    </td>
+
+	    <td>
+	   
+	    		
+
+	    </td>
+
+	    
+	    <td>
+				<%= link_to 'Review Request Details',  gig , class: "btn btn-medium btn-primary" %>
+
+		</td>
+
+		<td>
+				<%= link_to 'Cancel Request',  gig, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-medium btn-primary" %>
+
+		</td>
+
+<%end%>
+
   </tr>
+
+ </a>

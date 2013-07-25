@@ -43,15 +43,15 @@
 
   <h5> Music Category </h5>
 
-    <%= f.input :music_type, :label => false, :placeholder =>'Phone Number' %>
+    <%= f.select :music_type, [['Band','Band'],['DJ','DJ'],['Classical Musician(s)','Classical Musician']], :placeholder =>'Select Musician Type' %>
 
   <h5> Zip Code </h5>
 
-    <%= f.input :zip, :label => false, :placeholder =>'Password' %>
+    <%= f.input :zip, :label => false, :placeholder =>'Zip Code' %>
 
     <h5> Password </h5>
 
-    <%= f.input :password, :label => false, :placeholder =>'Email Address' %>
+    <%= f.input :password, :label => false, :placeholder =>'Password' %>
 
 
 </div>

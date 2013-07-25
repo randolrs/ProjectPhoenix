@@ -1,0 +1,25 @@
+<div class = "Request-container">
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <h2>Current Gig Requests</h2>
+        <th> ID</th>
+        <th> Musician ID</th>
+      </tr>
+
+    </thead>
+
+      <tbody>
+
+      <%= render @bids %>
+
+    </tbody>
+
+  </div>
+
+</table>
+
+</div>
+
+<%= link_to 'New Bid', new_bid_path %>

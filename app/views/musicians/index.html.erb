@@ -1,0 +1,32 @@
+<div class = "Request-container">
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <h2>Current Gig Requests</h2>
+        <th> Type</th>
+        <th> Date</th>
+        <th> Bids Received</th>
+      </tr>
+
+    </thead>
+
+      <tbody>
+
+<% if musician_signed_in? %>
+        <td><%= @gig.description %></td>
+        
+<% else %>
+      <%= render @gigs %>
+
+<% end %>
+
+    </tbody>
+
+  </div>
+
+</table>
+
+</div>
+
+<%= link_to 'New Gig', new_gig_path %>
