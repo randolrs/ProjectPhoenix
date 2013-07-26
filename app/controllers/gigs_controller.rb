@@ -17,8 +17,8 @@ class GigsController < ApplicationController
 
   def gigindex
 
-
-    @gigs = Gigs.all
+    @gigs = Gig.find(:all, :conditions => {:music_type => current_musician.music_type})
+    #@gigs = Gigs.all
 
     respond_to do |format|
       format.html # index.html.erb

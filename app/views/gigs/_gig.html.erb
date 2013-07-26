@@ -65,19 +65,20 @@
 
 	    <td>
 	   
-	    		<%= gig.user_id %>
+	    		<%= gig.event_zip %>
 
 	    </td>
 
 	    <td>
 	   
+	   			<%= gig.event_price %>
 	    		
 
 	    </td>
 
 	    
 	    <td>
-				<%= link_to 'Review Request Details',  gig , class: "btn btn-medium btn-primary" %>
+				<%= link_to 'Bid on this Gig',  make_bids_path , class: "btn btn-medium btn-primary" %>
 
 		</td>
 

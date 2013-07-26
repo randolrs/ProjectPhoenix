@@ -1,0 +1,27 @@
+<div class = "Request-container">
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <h2>Gigs You Can Bid On</h2>
+        <th> Type</th>
+        <th> Date</th>
+        <th> Event Zip</th>
+        <th> Budget </th>
+      </tr>
+
+    </thead>
+
+      <tbody>
+
+      <%= render @gigs %>
+
+    </tbody>
+
+  </div>
+
+</table>
+
+</div>
+
+<%= link_to 'New Gig', new_gig_path %>

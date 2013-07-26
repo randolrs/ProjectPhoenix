@@ -3,7 +3,7 @@ class BidsController < ApplicationController
   # GET /bids.json
   def index
     
-    @bids = current_user.Gigs.Bids.all
+    @bids = Bid.find(params[:id])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,7 +15,8 @@ class BidsController < ApplicationController
 # GET /bids.json
 def bidindex
     
-    @bids = Bid.all
+    @musician = current_musician
+    @bids = Bid.find(:all, :conditions => {:musician_id => current_musician.id})
 
     respond_to do |format|
       format.html # index.html.erb
@@ -57,7 +58,7 @@ def bidindex
   # POST /bids
   # POST /bids.json
   def create
-    @bid = current_musician.Bids.new(params[:bid])
+    @bid = Bid.new(params[:bid])
 
     @bid.musician_id = current_musician.id
 
