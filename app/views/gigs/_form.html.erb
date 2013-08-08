@@ -13,6 +13,9 @@
 
 <%= simple_form_for(@gig, html: { class: "form-vertical"}) do |f| %>
 
+<%= f.hidden_field :user_id, as: :integer, :label => false, :placeholder => current_user.id %>
+
+
 	<div class="musiciansignupform">
 
 		<h5> I want ... </h5>

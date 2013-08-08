@@ -15,7 +15,6 @@ class BidsController < ApplicationController
 # GET /bids.json
 def bidindex
     
-    @musician = current_musician
     @bids = Bid.find(:all, :conditions => {:musician_id => current_musician.id})
 
     respond_to do |format|
@@ -40,9 +39,11 @@ def bidindex
   def new
     @bid = Bid.new
 
-#add musician id to new bid
+    @bid.gig_id = (params[:gig])
 
-#    @bid.musician_id = current_musician.id
+    @gig = Gig.find(params[:gig])
+
+    @bid.gig_id = @gig.id
 
     respond_to do |format|
       format.html # new.html.erb
@@ -58,20 +59,31 @@ def bidindex
   # POST /bids
   # POST /bids.json
   def create
+
     @bid = Bid.new(params[:bid])
 
     @bid.musician_id = current_musician.id
 
+    
+    @gig = Gig.find(@bid.gig_id)
+
+    @gig.bidcount = Bid.where(gig_id: @bid.gig_id).count
+
 
     respond_to do |format|
       if @bid.save
+
         format.html { redirect_to @bid, notice: 'Bid was successfully created.' }
         format.json { render json: @bid, status: :created, location: @bid }
+
       else
         format.html { render action: "new" }
         format.json { render json: @bid.errors, status: :unprocessable_entity }
       end
     end
+
+    
+
   end
 
   # PUT /bids/1

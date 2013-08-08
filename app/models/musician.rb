@@ -7,7 +7,9 @@ class Musician < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :music_type, :phone, :zip
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :music_type, :phone, :zip,
+                    :per_hour, :beta_code
+                    
   # attr_accessible :title, :body
 
   has_many :gigs

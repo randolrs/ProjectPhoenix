@@ -1,5 +1,5 @@
 class Bid < ActiveRecord::Base
-  attr_accessible :quote
+  attr_accessible :quote, :gig_id
 
   belongs_to :musician
   belongs_to :gig

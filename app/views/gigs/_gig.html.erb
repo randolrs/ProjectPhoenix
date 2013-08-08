@@ -22,13 +22,13 @@
 
 	    <td>
 	   
-	    		<%= gig.user_id %>
+	    		<%= gig.bids.count %>
 
 	    </td>
 
 	    <td>
 	   
-	    		<%= render @bids %>
+	    		
 
 	    </td>
 
@@ -59,11 +59,15 @@
 
 		</td>
 
-		<td> <a href="shane.com"> <%=gig.event_date.strftime("%B %d, %Y")%> </a> </td>
+		<td> <a href="shane.com"> <%=gig.created_at.strftime("%B %d, %Y")%> </a> </td>
+
+	    
+	    <td> <a href="shane.com"> <%=gig.event_date.strftime("%B %d, %Y")%> </a> </td>
 
 		
 
 	    <td>
+
 	   
 	    		<%= gig.event_zip %>
 
@@ -76,14 +80,16 @@
 
 	    </td>
 
+	    <td>
+	   
+	   			<%= gig.per_hour %>
+	    		
+
+	    </td>
+
 	    
 	    <td>
-				<%= link_to 'Bid on this Gig',  make_bids_path , class: "btn btn-medium btn-primary" %>
-
-		</td>
-
-		<td>
-				<%= link_to 'Cancel Request',  gig, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-medium btn-primary" %>
+				<%= link_to 'Bid on this Gig',  make_bids_path(:gig => gig.id) , class: "btn btn-medium btn-primary" %>
 
 		</td>
 

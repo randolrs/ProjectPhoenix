@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130724024031) do
+ActiveRecord::Schema.define(:version => 20130806025646) do
 
   create_table "bids", :force => true do |t|
     t.datetime "created_at",  :null => false
@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(:version => 20130724024031) do
     t.integer  "event_price"
     t.integer  "event_duration"
     t.integer  "gig_id"
+    t.float    "per_hour"
+    t.integer  "bidcount"
   end
 
   add_index "gigs", ["gig_id"], :name => "index_gigs_on_gig_id"
@@ -69,6 +71,8 @@ ActiveRecord::Schema.define(:version => 20130724024031) do
     t.string   "phone"
     t.string   "zip"
     t.string   "music_type"
+    t.float    "per_hour"
+    t.string   "beta_code"
   end
 
   add_index "musicians", ["email"], :name => "index_musicians_on_email", :unique => true

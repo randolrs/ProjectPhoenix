@@ -1,5 +1,6 @@
 class Gig < ActiveRecord::Base
-  attr_accessible :desription, :image, :image_remote_url, :music_type, :event_type, :event_date, :event_zip, :event_duration, :event_price
+  attr_accessible :desription, :image, :image_remote_url, :music_type, :event_type, :event_date, 
+  :event_zip, :event_duration, :event_price, :user_id
 
   validates :desription, presence: true 
 

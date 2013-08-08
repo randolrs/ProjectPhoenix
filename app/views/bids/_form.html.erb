@@ -11,20 +11,23 @@
 
 <div class="musiciansignuppadding">
 
-<%= simple_form_for(@bid, html: { class: "form-vertical"}) do |f| %>
+	<%= simple_form_for(@bid, html: { class: "form-vertical"}) do |f| %>
 
-	<div class="musiciansignupform">
+		<div class="musiciansignupform">
 
+				<%= f.hidden_field :gig_id, as: :integer, :label => false, :placeholder => @bid.gig_id %>
 
-  <h5> My quote </h5>
+		  	<h5> My quote </h5>
 
- <%= f.input :quote, as: :float, :label => false, :placeholder =>'My Quote' %>
+		 		<%= f.input :quote, as: :float, :label => false, :placeholder =>'My Quote' %>
 
-	</div>
+		</div>
 
-  <div class="form-actions">
-    <%= f.button :submit, class: "btn btn-primary" %>
-  </div>
+		  <div class="form-actions">
+		    	
+		    	<%= f.button :submit, class: "btn btn-primary" %>
+
+		  </div>
 
 <% end %>
 

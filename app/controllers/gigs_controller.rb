@@ -7,7 +7,8 @@ class GigsController < ApplicationController
   def index
 
 
-    @gigs = current_user.Gigs.all
+    @gigs = Gig.find(:all, :conditions => {:user_id => current_user.id})
+    
 
     respond_to do |format|
       format.html # index.html.erb
@@ -29,6 +30,7 @@ class GigsController < ApplicationController
   # GET /gigs/1
   # GET /gigs/1.json
   def show
+
     @gig = Gig.find(params[:id])
 
     respond_to do |format|
@@ -62,6 +64,9 @@ class GigsController < ApplicationController
   # POST /gigs.json
   def create
     @gig = current_user.Gigs.new(params[:gig])
+
+    @gig.per_hour = @gig.event_price / @gig.event_duration
+    @gig.bidcount = 0
 
     respond_to do |format|
       if @gig.save

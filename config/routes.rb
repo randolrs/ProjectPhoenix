@@ -1,22 +1,23 @@
 ProjectPhoenix::Application.routes.draw do
   
 
-  resources :bids
+resources :bids
 
 
-  get "musicians/show"
+get "musicians/show"
 
-  get "users/show"
+get "users/show"
 
-  resources :gigs
+resources :gigs
 
-
-  resources :gig_requests
+resources :gig_requests
 
 
 get "pages/home"
 
 root :to => 'pages#home'
+
+get 'home' => 'pages#home'
 
 get 'about' => 'pages#about'
 

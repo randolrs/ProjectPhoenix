@@ -1,21 +1,26 @@
 <div class="headerwrap">
-    <div class="headerlogo">
+    <div class="titlewrap">
+        <div class="headerlogo">
 
-        <img src="https://s3.amazonaws.com/ProjectPhoenix/Textlogo.png" alt="">
-    </div>
+            <img src="https://s3.amazonaws.com/ProjectPhoenix/Textlogo.png" alt="">
+        </div>
 
-    <div class="headertag">
-        <h6>The best musical entertainment for your event.</h6>
-    </div>
-    
-    <div class="callus">
-        <strong> Contact us by chat, email or call </strong>
-        <div> 1-855-SONGBIRDS (1-xxx-xxx-xxxx) </div>
-    </div>
+        <div class="headertag">
+            <h6>The best musical entertainment for your event.</h6>
+        </div>
+        
+        <div class="callus">
+            <strong> Contact us by chat, email or call </strong>
+            <div> 1-855-SONGBIRDS (1-xxx-xxx-xxxx) </div>
+        </div>
 
-    <div class="header-login">
-        <a class="become-a-pro" href="/"> Become </a>
+        <div class="signupcontainer">
+            
+            <div class="containermini">
+            <%= link_to "Become a SongBird", new_musician_registration_path %>
+            </div>
 
+        </div>
     </div>
 
 </div>
@@ -40,20 +45,25 @@
                             
                             <% if user_signed_in? %>
 
+                                <li><%= link_to "Home", home_path %></li>
+
                                 <li><%= link_to "My Dashboard", dashboard_path %></li>
                                 <li><%= link_to "Request Live Music", request_path %></li>
-                                <li><%= link_to "How it Works", how_it_works_path, method: :delete %></li>
+                                <li><%= link_to "How it Works", how_it_works_path %></li>
 
                             <% elsif musician_signed_in? %>
-                            
+                                    
+                                    <li><%= link_to "Home", home_path %></li>
+
                                     <li><%= link_to "My Dashboard", musician_dashboard_path %></li>
+                                    <li> <%= link_to "My Bids", my_bids_path %>   </li>
+
                                     <li><%= link_to "How it Works", how_it_works_path %></li>
-                                    <li>   <%= link_to "Gigs", make_bids_path %>   </li>
-                                    <li>   <%= link_to "My Bids", my_bids_path %>   </li>
 
                             <% else %>
-                                
-                                    <li> <%= link_to "My Dashboard", dashboard_path %> </li>
+                                    
+                                    <li><%= link_to "Home", home_path %></li>
+
                                     <li><%= link_to "How it Works", how_it_works_path %></li>
                                    
                                     <li><%= link_to "Request Live Music", request_path %></li>
@@ -80,10 +90,18 @@
 
 
                       <% else %>
-                            <li><%= link_to "Become an SB Musician", new_musician_registration_path %></li>
-                            
-                            <li><%= link_to "Signup", new_user_registration_path %></li>
-                            <li><%= link_to "Login", new_user_session_path %></li>
+
+                            <div class = "startpadding">
+                                <h5> <%= link_to 'Get Started Here!', new_user_registration_path , class: "btn btn-large btn-primary" %> </h5>
+
+                            <!--    <li><%= link_to "Become an SB Musician", new_musician_registration_path %></li>
+                                
+                                <li><%= link_to "Signup", new_user_registration_path %></li>
+                                <li><%= link_to "Login", new_user_session_path %></li>
+
+                            -->
+                            </div>
+
                       <% end %>
             </ul>
                 </div>
