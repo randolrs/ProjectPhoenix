@@ -12,6 +12,9 @@ resources :gigs
 
 resources :gig_requests
 
+
+get "pages/home"
+
 root :to => 'pages#home'
 
 get 'home' => 'pages#home'
