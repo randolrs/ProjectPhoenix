@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+  
   <title>ProjectPhoenix</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -12,16 +12,12 @@
 </head>
 <body>
 
-  <!--
-
-	   ruby render 'layouts/header'
+	   <%= render 'layouts/header' %>
 
 
-            ruby flash.each do |name, msg| %>
-                ruby content_tag(:div, msg, class: "alert alert-#{name}") %>
-            rub end %>
-
-  -->
+            <% flash.each do |name, msg| %>
+                <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+            <% end %>
 
     <%= yield %>
 
