@@ -23,20 +23,18 @@ userbtn {
     vertical-align: middle;
     font-weight: bold;
     color: white;
-    padding:0px;
+    padding:3px;
+    border: #1A7F1A;
+    border-radius:0px;
 }
 
 .navbar{
     padding:0px;
+    box-shadow: 1px .5px 2px 1px #1F581F;
+    border-top-color:#93FF95
 
 }
 
-.footer{
-    color: $grayLight;
-    a{
-        color: $gray;
-    }
-}
 
 .bottom-margin{
   margin-top: 1cm;
