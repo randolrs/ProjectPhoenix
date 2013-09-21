@@ -1,48 +1,59 @@
-<div class="usersignincontainer">
+<div class="userlogin">
 
-<div class = "headtext">
+	<div class="logincontainer">
 
-<h4>Login to SongBird</h4>
+		<div class="login-header">
+			
+			<h1> Login </h1>
 
-</div>
+		</div>
 
-<div class="userloginpadding">
-
-<h4> </h4>
-
-<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-vertical'}) do |f| %>
-
-  
-<div class="userloginform">
-
-	<h6> Email Address </h6>
-
-	  <%= f.input :email, :label => false, :placeholder =>'Email Address' %>
+		<div class="userloginpadding">
 
 
-	<h6> Password </h6>
+		<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-vertical'}) do |f| %>
 
-	  <%= f.input :password, :label => false, :placeholder =>'Password' %>
+  		
 
-</div>
+			<div class="userlogin-form">
 
-<div class="userloginbtn">
+				<h6> Email Address </h6>
+
+				  <%= f.input :email, :label => false, :placeholder =>'Email Address' %>
+
+
+				<h6> Password </h6>
+
+				  <%= f.input :password, :label => false, :placeholder =>'Password' %>
+
+			</div>
+
+			<div class="userloginbtn">
  
-    <%= f.submit "Sign in", class: "btn btn-primary" %>
+    			<%= f.submit "Login", class: "btn btn-primary" %>
 
-</div>   
+			</div>  
+
+		<% end %>
+
+		<div class="login-footer">
+			
+			<ul id="loginfooter">
+				
+				<li> <a href="/users/password/new"> Forgot Your Password? </a> </li>
+				<li> <a href="/users/sign_up"> Sign up </a> </li>
+				
+
+			</ul>
+
+		</div>
+
+	</div>
 
 
-<% end %>
 
-<ul>
-	<%= render "devise/shared/links" %>
 
-</ul>
-
-</div>
-
-</div>
+</div>	
 
 
 	

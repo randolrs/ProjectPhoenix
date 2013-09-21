@@ -65,7 +65,7 @@ class GigsController < ApplicationController
   def create
     @gig = current_user.Gigs.new(params[:gig])
 
-    @gig.per_hour = @gig.event_price / @gig.event_duration
+    # @gig.per_hour = @gig.event_price / @gig.event_duration
     @gig.bidcount = 0
 
     respond_to do |format|

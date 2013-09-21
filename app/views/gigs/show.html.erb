@@ -1,36 +1,80 @@
 <% if user_signed_in? %>
 
-<div class="row">
-	<div class = "span6 offset3">
 
-		<div class = "well">
+<div class="gigdetailcontainer">
 
-		 <%= @gig.desription %>
-
-		<p>
-		  <%= @gig.user.name %>
-		</p>
-
-		<p>
-		  <%= @gig.per_hour %>
-		</p>
-
-
-		<% if current_user == @gig.user %>
-		<%= link_to 'Edit', edit_gig_path(@gig) %>
-		<%= link_to 'Edit', bid_path(@gig) %>
-		<% end %>
-		
-
-		<%= link_to 'Back', gigs_path %>
+		<div class="request-header">
+			
+			<h1> Event Details </h1>
 
 		</div>
-	</div>
-</div>
 
-	<% elsif musician_signed_in? %>
+		<div class="gigdetailpadding">
+
+			<div class="detailcontainer">
+
+				<ul id="gigdetail">
+						
+						<li> <p> <b> Musician Type: </b> </p> </li>
+
+						<li> <p> <%= @gig.music_type %> </p> </li>
+						
+
+				</ul> 
+			</div>
+
+			<div class="detailcontainer2">
+				<ul id="gigdetail2">
+						<li> <p> <b> Date: </b> </p> </li>
+
+						
+						<li> <p> <%=@gig.event_date.strftime("%B %d, %Y")%> </p> </li>
+						
+
+				</ul> 
+
+			</div>
+
+			<div class="detailcontainer3">
+				<ul id="gigdetail3">
+						<li> <p> <b> Time: </b> </p> </li>
+
+						<li> <p> <%=@gig.event_date.strftime("%l:%M %P")%> </p> </li>
+						
+
+				</ul>
+			</div>
+
+			<div class="detailcontainer4">
+				<ul id="gigdetail4">
+						<li> <p> <b> Budget: </b> </p> </li>
+
+						<li> <p> $<%=@gig.event_price%> </p> </li>
+						
+
+				</ul>
+			</div>
+
+		<div class="login-footer">
+			
+			<ul id="loginfooter">
+				
+				<li> <%= link_to 'Modify', edit_gig_path(@gig) %> </li>
+				<li> <%= link_to 'Confirm', gigs_path %> </li>
+				
+
+			</ul>
+
+		</div>
+
+
+		</div>
+
+		<% elsif musician_signed_in? %>
         <td><%= @gig.desription %></td>
         
     <% end %>
+
+</div>
 
 

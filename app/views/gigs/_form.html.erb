@@ -1,61 +1,65 @@
-<div class="musiciansignupcontainer">
 
-<div class = "appheadtext">
+<div class="requestcontainer">
 
-<h3>Request Live Music</h3>
+		<div class="request-header">
+			
+			<h1> Request Live Musicians </h1>
 
-<h3>From High Quality Local Musicians </h3>
+		</div>
+
+		<div class="requestpadding">
+
+			<%= simple_form_for(@gig, html: { class: "form-vertical"}) do |f| %>
+
+			<%= f.hidden_field :user_id, as: :integer, :label => false, :placeholder => current_user.id %>
+
+
+				<h5> Musician Type? </h5>
+
+		 		<%= f.select :music_type, [['a Band','Band'],['a DJ','DJ'],['Classical Musicians','Classical Musician']] %>
+
+
+		 		<h5> Event Type?</h5>
+
+				 <%= f.select :event_type, [['Corporate Event','corporate event'],['Private Event','private event'],['Music Venue', 'music venue']] %>
+
+				 <h5> Event Date? </h5>
+
+				 <%= f.datetime_select :event_date %>
+
+				 <h5> Length (Hours) </h5>
+
+				 <%= f.input :event_duration, :label => false, :placeholder =>'Event Duration' %>
+
+				  <h5> Zip Code </h5>
+
+				 <%= f.input :event_zip, as: :string, :label => false, :placeholder =>'Zip Code' %>
+
+
+				<div class="form-actions">
+	    			<%= f.button :submit, class: "btn btn-primary" %>
+	  			</div>
+
+			<% end %>
+
+
+			<div class="login-footer">
+			
+				<ul id="loginfooter">
+					
+					<li> <%= link_to "My Gigs", dashboard_path %> </li>
+					<li> <a href="/"> Back </a> </li>
+					
+
+				</ul>
+
+			</div>
+
+
+
+		</div>
 
 </div>
+  		
 
-
-<div class="musiciansignuppadding">
-
-<%= simple_form_for(@gig, html: { class: "form-vertical"}) do |f| %>
-
-<%= f.hidden_field :user_id, as: :integer, :label => false, :placeholder => current_user.id %>
-
-
-	<div class="musiciansignupform">
-
-		<h5> I want ... </h5>
-
- <%= f.select :music_type, [['a Band','Band'],['a DJ','DJ'],['Classical Musicians','Classical Musician']] %>
-
-
- 		<h5> For my ... </h5>
-
- <%= f.select :event_type, [['Corporate Event','corporate event'],['Private Event','private event'],['Music Venue', 'music venue']] %>
-
- <h5> On ... </h5>
-
- <%= f.datetime_select :event_date %>
-
- <h5> For this many hours ... </h5>
-
- <%= f.input :event_duration, :label => false, :placeholder =>'Event Duration' %>
-
-  <h5> In the Following Zip Code ... </h5>
-
- <%= f.input :event_zip, as: :string, :label => false, :placeholder =>'Zip Code' %>
-
- <h5> I am willing to pay ... </h5>
-
- <%= f.input :event_price, as: :string , :label => false, :placeholder =>'Event Price' %>
-
-<h5> Additional Comments </h5>
-  <%= f.input :desription, input_html: { rows: "3" }, :label => false, :placeholder =>'Additional Comments' %>
-
-	</div>
-
-  <div class="form-actions">
-    <%= f.button :submit, class: "btn btn-primary" %>
-  </div>
-
-<% end %>
-
-</div>
-
-</div>
-
-</div>
+			

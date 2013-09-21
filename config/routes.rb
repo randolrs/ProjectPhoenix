@@ -15,9 +15,9 @@ resources :gig_requests
 
 get "pages/home"
 
-root :to => 'pages#home'
+root :to => 'pages#landing_user'
 
-get 'home' => 'pages#home'
+get 'home' => 'pages#landing_user'
 
 get 'about' => 'pages#about'
 

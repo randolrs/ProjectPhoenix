@@ -16,9 +16,35 @@
 
         <div class="signupcontainer">
             
-            <div class="containermini">
-            <%= link_to "Become a SongBird", new_musician_registration_path %>
-            </div>
+            <% if user_signed_in? %>
+                        
+
+                <%= link_to "Edit Profile", edit_user_registration_path %>
+
+                <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+
+                <% elsif musician_signed_in? %>
+
+                    <li><%= link_to "Edit Profile", edit_musician_registration_path %></li>
+
+                    <li><%= link_to "Logout", destroy_musician_session_path, method: :delete %></li>
+
+
+                <% else %>
+
+                            
+
+                    <%= link_to "Become an SB Musician", new_musician_registration_path %>
+                    
+                    <%= link_to "Signup", new_user_registration_path %>
+                    
+                    <%= link_to "Login", new_user_session_path %>
+
+                            
+
+            <% end %>
+            
+
 
         </div>
     </div>
@@ -42,6 +68,8 @@
                         <!--<div class="navform">-->
                             
                             <% if user_signed_in? %>
+
+                                <li> Welcome Back, <%= current_user.name %> ! </li>
 
                                 <li><%= link_to "Home", home_path %></li>
 

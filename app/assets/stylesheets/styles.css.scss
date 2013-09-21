@@ -1,8 +1,8 @@
-$navbarBackgroundHighlight: #36B32D;
-$navbarBackground: #36B32D;
+$navbarBackgroundHighlight: #2CBD22;
+$navbarBackground: #1DE40E;
 $navbarText:  #f9ed9d;
 $navbarLinkColor: white;
-$btnPrimaryBackground: #E51B21;
+$btnPrimaryBackground: #681AFF;
 $btnText: white;
 
 @import 'bootstrap';
@@ -12,6 +12,10 @@ body{
 }
 
 @import 'bootstrap-responsive';
+
+navigation a{
+  font-weight: bold;
+}
 
 userbtn {
   width:100px;

@@ -1,6 +1,174 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+  .main-header{
+    margin: 0 auto 50px;
+    height:70px;
+    background-image:url('http://www.giftrocket.com/images/background_tile.jpg')
+  }
+
+  .header-inside{
+    width:1000px;
+    position:relative;
+    padding:20px 0px;
+    margin-left:auto;
+    margin-right:auto;
+    height:69px;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+  }
+
+  .header-name{
+    width:200px;
+    float:left;
+  }
+
+  .header-name h1 a{
+    font-size:30px;
+    font-family: "Trebuchet";
+  }
+
+  .header-name h1 a:hover{
+    color:white;
+    text-decoration:none;
+    background-color: transparent;
+  }
+
+
+  #navigation li{
+    list-style:none;
+    float:right;
+    display:inline;
+    list-style-type:none;
+    padding:20px;
+  }
+
+  #gigdetail ul{
+    list-style:none;
+    float:left;
+    display:block;
+    list-style-type:none;
+  }
+
+  #gigdetail li{
+    list-style:none;
+    float:left;
+    display:block;
+    list-style-type:none;
+    padding:20px;
+  }
+
+  .detailcontainer {
+    list-style:none;
+    display:block;
+    list-style-type:none;
+  
+}
+
+  #navigation a{
+    font-size:18px;
+  }
+
+
+  #navigation a:hover{
+    color:white;
+    text-decoration:none;
+    background-color: transparent;
+  }
+
+#summary {
+  list-style-type: none;
+  margin: 0px 0px 25px 0px;
+}
+
+ #summary li{
+  font-size:12px;
+  background:url('http://www.giftrocket.com/images/gold_star.png') no-repeat 0px 4px;
+  padding: 0px 0px 10px 15px;
+ }
+
+.main{
+  padding-top:40px;
+  width:1000px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.main-content{
+  padding-bottom:70px;
+  width:1000px;
+  height:395px;
+}
+
+.left-column {
+  width: 550px;
+  float:left;
+  height:395px;
+}
+
+.right-column {
+  width: 400px;
+  float:right;
+  height:395px;
+}
+
+.request-button{
+  margin-left:auto;
+  margin-right:auto;
+  padding:0px 0px 45px 0px;
+}
+
+.request_button{
+  background-color:#9897FF;
+}
+
+a.request_button{
+  padding: 18px 18px 16px 18px;
+  font-size: 30px;
+  font-weight: bold;
+  color:white;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius:2.4px;
+}
+
+a.request_button:visited{
+  color:white;
+}
+
+a.request_button:hover{
+  text-decoration:none;
+  color:white;
+  background-color:#4748BF;
+}
+
+request_button:focus{
+  background-color:#4748BF;
+}
+
+#home_reasons li {
+    list-style:none;
+    display:inline;
+    list-style-type:none;
+    padding:20px
+}
+
+#home_reasons a{
+    font-size:18px;
+    color:black;
+  }
+
+  #home_reasons li h3{
+    font-size:18px;
+    color:black;
+    width:300px;
+  }
+
+  #home_reasons a:hover{
+    color:black;
+    text-decoration:none;
+    background-color: transparent;
+  }
+
  img.adjusted {
     position: relative;
     z-index: -1;
@@ -46,7 +214,7 @@
  	z-index: -3;
  	width: 100%;
     height: 400px;
-    top: 114px;
+    top: 200px;
  }
 
  body{
@@ -184,20 +352,32 @@ img.home {
 	-webkit-transform:rotate(1deg); /* Safari and Chrome */
   }
 
- .footerwrap{
-    position:absolute;
- 	  height: 400px;
-    bottom: 0px;
 
-}
 
 .headerwrap{
 	position:absolute;
   width:100%;
 	height:74px;
 	top:0px;
-	background-color:#F4F3F5;
 	z-index:-1;
+
+      /* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(top, #FFFFFF 0%, #EBEBEB 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #FFFFFF 0%, #EBEBEB 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(top, #FFFFFF 0%, #EBEBEB 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #EBEBEB));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #EBEBEB 100%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to bottom, #FFFFFF 0%, #EBEBEB 100%);
 }
 
 .titlewrap{
@@ -207,8 +387,25 @@ img.home {
   margin-right:auto;
   height:74px;
   top:0px;
-  background-color:#F4F3F5;
   z-index:0;
+
+      /* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(top, #FFFFFF 0%, #EBEBEB 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #FFFFFF 0%, #EBEBEB 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(top, #FFFFFF 0%, #EBEBEB 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #EBEBEB));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #EBEBEB 100%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to bottom, #FFFFFF 0%, #EBEBEB 100%);
 }
 
 .small-margin{
@@ -251,11 +448,11 @@ img.home {
   top:18px;
   left:770px;
   height:30px;
-  background-color:#F4F3F5;
-  border:1.5px solid;
-  border-radius:4px;
-  border-color:#b2b2b2;
-  box-shadow: 1px 3px 5px 1px #D4D4D4;
+ // background-color:#F4F3F5;
+  // border:1.5px solid;
+  // border-radius:4px;
+ // border-color:#b2b2b2;
+ // box-shadow: 1px 3px 5px 1px #D4D4D4;
   }
 
   .containermini{
@@ -267,3 +464,4 @@ img.home {
     margin-right:70px;
     padding:0px;
   }
+

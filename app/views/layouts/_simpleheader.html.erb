@@ -1,0 +1,54 @@
+<div class="main-header">
+	
+	<div class = "header-inside">
+
+		<div class = "header-name">
+
+			<h1>
+				<a href="/"><i>GoSongBird</i></a>
+
+			</h1>
+		</div>
+
+<% if user_signed_in? %>
+                 
+	            <ul id="navigation">
+				<li> <a> <%= link_to "Logout", destroy_user_session_path, method: :delete %> </a> </li>
+				<li> <a> <%= link_to "Request Live Musicians", request_path %> </a> </li>
+				<li> <a> <%= link_to "How it Works", how_it_works_path %> </a> </li>
+				<li id="active"> <a href="/" id="current"> Home </a> </li> 
+
+				</ul>        
+
+			<% elsif musician_signed_in? %>
+                
+                <ul id="navigation">
+				<li> <a> <%= link_to "Logout", destroy_musician_session_path, method: :delete %> </a> </li>
+				<li> <a href="/" id="current"> Blog </a> </li>
+				<li> <a> <%= link_to "How it Works", how_it_works_path %> </a> </li>
+				<li id="active"> <a href="/" id="current"> Home </a> </li> 
+
+				</ul>  
+
+
+            <% else %>
+
+	            <ul id="navigation">
+				<li> <a> <%= link_to "Sign In", new_user_session_path %> </a> </li>
+				<li> <a href="/" id="current"> Blog </a> </li>
+				<li> <a> <%= link_to "How it Works", how_it_works_path %> </a> </li>
+				<li id="active"> <a href="/" id="current"> Home </a> </li> 
+
+				</ul>             
+
+                    
+
+                            
+
+            <% end %>
+		
+
+	</div>
+
+
+</div>
