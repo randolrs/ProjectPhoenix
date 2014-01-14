@@ -70,8 +70,12 @@ class GigsController < ApplicationController
 
     respond_to do |format|
       if @gig.save
-        format.html { redirect_to @gig, notice: 'Gig was successfully created.' }
-        format.json { render json: @gig, status: :created, location: @gig }
+
+        format.html { render action: "addlinfo" }
+        format.json { render json: @gig.errors, status: :unprocessable_entity }
+
+        #format.html { redirect_to @gig, notice: 'Gig was successfully created.' }
+        #format.json { render json: @gig, status: :created, location: @gig }
       else
         format.html { render action: "new" }
         format.json { render json: @gig.errors, status: :unprocessable_entity }

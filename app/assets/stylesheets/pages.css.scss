@@ -3,17 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
   .main-header{
     margin: 0 auto 50px;
-    height:70px;
-    background-image:url('http://www.giftrocket.com/images/background_tile.jpg')
+    height:50px;
+    background-color: red;
   }
 
   .header-inside{
     width:1000px;
     position:relative;
-    padding:20px 0px;
+    //padding:20px 0px;
     margin-left:auto;
     margin-right:auto;
-    height:69px;
+    height:49px;
     border-bottom: 1px solid rgba(0,0,0,.2);
   }
 
@@ -24,6 +24,7 @@
 
   .header-name h1 a{
     font-size:30px;
+    color:white;
     font-family: "Trebuchet";
   }
 
@@ -465,3 +466,57 @@ background-image: linear-gradient(to bottom, #FFFFFF 0%, #EBEBEB 100%);
     padding:0px;
   }
 
+.bottom-section{
+  background-color: #06E56E;
+
+}
+
+.below-header{
+  background-color:#D6E7D6;
+  top:50px;
+  height:90px;
+  
+}
+
+.below-container{
+  position:relative;
+  top:35px;
+  text-align:center;
+  font-size:30px;
+  color: #747474;
+  height:90px;
+
+}
+
+.below-container a{
+    color: #575656;
+  
+  }
+
+  .below-container a:hover{
+    text-decoration:none;
+    color: #747474;
+
+  
+  }
+
+  .right-column-content{
+    margin-top:75px;
+  }
+
+
+.navbar-outer{
+  margin-bottom:0px;
+}
+
+.navbar{
+    margin-bottom:0px;
+}
+
+.main-content{
+  background-color:#ffffff;
+  box-shadow: 0 5px 5px #ccc;
+  border-style:solid;
+  border-width:1px;
+  border-color: #C2C2C2;
+}

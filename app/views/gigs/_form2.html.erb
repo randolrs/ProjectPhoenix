@@ -1,0 +1,54 @@
+<div class="requestcontainer">
+
+		<div class="request-header">
+			
+			<h1> Additional Gig Information </h1>
+
+		</div>
+
+		<div class="requestpadding">
+
+			<%= simple_form_for(@gig, html: { class: "form-vertical"}) do |f| %>
+
+				 
+				 <h5> Event Date? </h5>
+
+				  <%= f.datetime_select :event_date %>
+
+			
+
+				 <h5> Length (Hours) </h5>
+
+				 <%= f.input :event_duration, :label => false, :placeholder =>'Event Duration' %>
+
+
+				 <h5> Budget </h5>
+
+				 <%= f.input :event_price, :label => false, :placeholder =>'Budget' %>
+
+
+
+				<div class="form-actions">
+	    			<%= f.button :submit, class: "btn btn-primary" %>
+	  			</div>
+
+			<% end %>
+
+
+			<div class="login-footer">
+			
+				<ul id="loginfooter">
+					
+					<li> <%= link_to "My Gigs", dashboard_path %> </li>
+					<li> <a href="/"> Back </a> </li>
+					
+
+				</ul>
+
+			</div>
+
+
+
+		</div>
+
+</div>

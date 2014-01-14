@@ -33,6 +33,8 @@ get 'musician_dashboard' => 'gigs#gigindex'
 
 get 'make_bids' => 'bids#new'
 
+get 'edit_gig' => 'gigs#edit'
+
   devise_for :users
 
   devise_for :musicians

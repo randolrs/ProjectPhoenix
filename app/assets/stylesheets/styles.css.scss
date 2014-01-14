@@ -1,7 +1,8 @@
-$navbarBackgroundHighlight: #2CBD22;
-$navbarBackground: #1DE40E;
+$navbarBackgroundHighlight: #333333;
+$navbarBackground: #333333;
 $navbarText:  #f9ed9d;
 $navbarLinkColor: white;
+$navbarFont: Cambria;
 $btnPrimaryBackground: #681AFF;
 $btnText: white;
 
@@ -35,7 +36,8 @@ userbtn {
 .navbar{
     padding:0px;
     box-shadow: 1px .5px 2px 1px #1F581F;
-    border-top-color:#93FF95
+    border-top-color:#93FF95;
+    margin-bottom:0px;
 
 }
 

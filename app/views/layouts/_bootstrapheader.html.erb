@@ -1,0 +1,97 @@
+	
+
+ 	<div class="navbar-outer">
+
+		 <div class="navbar">
+		  <div class="navbar-inner">
+
+		    <a class="brand" href="#">GoSongBird</a>
+
+		    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+
+		    <div class="nav-collapse">
+
+		   <!-- <ul class="nav"> -->
+
+		    	<% if user_signed_in? %>
+
+		    		<ul class="nav pull-left">
+
+			    		<li><%= link_to "Home", home_path %></li>
+			      		
+			      		<li> <%= link_to "How it Works", how_it_works_path %>  </li>
+
+			      		<li> <%= link_to "Request Live Musicians", request_path %> </li>
+
+		      		</ul>
+		      		
+		      		<ul class="nav pull-right">
+		      			
+						<form class="navbar-search">
+	  						<input type="text" class="search-query" placeholder="Search">
+	  						<button type="submit" class="btn">Search</button>
+						</form>
+
+						<li><%= link_to "Logout", destroy_user_session_path, method: :delete %> </li>
+
+					</ul>
+
+		    	<% elsif musician_signed_in? %>
+
+		    		<ul class="nav pull-left">
+
+		    			<li><%= link_to "Home", home_path %></li>
+
+			      		<li> <a> <%= link_to "How it Works", how_it_works_path %> </a> </li>
+			      		
+			      		<li> <a> <%= link_to "My Gigs", musician_dashboard_path %>  </a> </li>
+
+		      		</div>
+
+		      		<ul class="nav pull-right">
+
+		      			<form class="navbar-search">
+	  						<input type="text" class="search-query" placeholder="Search">
+	  						<button type="submit" class="btn">Submit</button>
+						</form>
+
+
+		      			<li> <a> <%= link_to "Logout", destroy_musician_session_path, method: :delete %> </a> </li>
+		      		</div>
+
+
+		    	<% else %>
+
+		      	
+					<ul class="nav pull-right">
+
+			      		
+			      		
+
+						<li class="dropdown"> <%= link_to "Login", new_user_session_path %> </li>
+
+					</ul>
+
+		      	<%end%>
+
+		      </div>
+		  <!--  </ul> -->
+
+		  </div>
+		</div> 
+
+	</div>    
+		
+
+		<div class="below-header">
+
+			<div class="below-container">
+
+				<a> Welcome to SongBird </a>
+			</div>
+
+		</div>                 
