@@ -16,6 +16,8 @@ get "pages/home"
 
 root :to => 'pages#home'
 
+get '/' => 'pages#home'
+
 get 'home' => 'pages#home'
 
 get 'about' => 'pages#about'
