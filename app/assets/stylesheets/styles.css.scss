@@ -2,8 +2,9 @@ $navbarBackgroundHighlight: #333333;
 $navbarBackground: #333333;
 $navbarText:  #f9ed9d;
 $navbarLinkColor: white;
-$navbarFont: Cambria;
-$btnPrimaryBackground: #681AFF;
+$navbarFont: Batang;
+$btnPrimaryBackground: red;
+$btnBackgroundHighlight: #681AFF;
 $btnText: white;
 
 @import 'bootstrap';
@@ -39,6 +40,24 @@ userbtn {
     border-top-color:#93FF95;
     margin-bottom:0px;
 
+}
+
+.navbar .brand{
+    font-size:24px;
+
+}
+
+.navbar .nav > li > a  {
+  font-size:16px;
+
+}
+
+.below-container2 > li{
+    width:300px;
+  }
+
+.navbar .nav > li > a:hover { 
+  color:#E5B3FF;
 }
 
 

@@ -12,12 +12,11 @@ resources :gigs
 
 resources :gig_requests
 
-
 get "pages/home"
 
-root :to => 'pages#landing_user'
+root :to => 'pages#home'
 
-get 'home' => 'pages#landing_user'
+get 'home' => 'pages#home'
 
 get 'about' => 'pages#about'
 
