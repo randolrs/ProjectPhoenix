@@ -30,6 +30,8 @@ get 'my_bids' => 'bids#bidindex'
 
 get 'dashboard' => 'gigs#index'
 
+get 'musician_signin' => 'musicians#sessions#new'
+
 get 'musician_dashboard' => 'gigs#gigindex'
 
 get 'make_bids' => 'bids#new'

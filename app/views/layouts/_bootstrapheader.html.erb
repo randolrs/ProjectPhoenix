@@ -85,15 +85,34 @@
 
 <% if user_signed_in? %>
 
-	<div class="below-header">
+<div class="below-header">
 
 			<div class="below-container2">
 
-				<b> <%= link_to "Home", home_path %> </b>
+				<div class="header-logo">
 
-				<b> <%= link_to "My Requests", dashboard_path %> </b>
+					<img src="https://s3.amazonaws.com/ProjectPhoenix/v_x.png" alt="" height="110" width="110">
 
-				<b> <%= link_to "FAQ", how_it_works_path %> </b>
+				</div>
+
+				<div class="header-title">
+
+						<p> <b> SongBird </b> </p>
+						
+						<p> <i> The Best Musicians </i> </p>
+						
+						<p> <i> for Your Event </i> </p>
+
+				</div>
+
+				<div class="header-cta">
+					<br>
+					<br>
+					<a href="/dashboard" class="sign-in-cta"> My Requests </a>
+
+				</div>
+
+
 			</div>
 
 	</div>
@@ -105,11 +124,30 @@
 
 			<div class="below-container2">
 
-				<a> <b> Home </b> </a>
+				<div class="header-logo">
 
-				<a> <b> My Requests </b> </a>
+					<img src="https://s3.amazonaws.com/ProjectPhoenix/v_x.png" alt="" height="110" width="110">
 
-				<a> <b> FAQ </b> </a>
+				</div>
+
+				<div class="header-title">
+
+						<p> <b> SongBird </b> </p>
+						
+						<p> <i> The Best Musicians </i> </p>
+						
+						<p> <i> for Your Event </i> </p>
+
+				</div>
+
+				<div class="header-cta">
+					<br>
+					<br>
+					<a href="/musician_dashboard" class="sign-in-cta"> My Gigs </a>
+
+				</div>
+
+
 			</div>
 
 	</div>
